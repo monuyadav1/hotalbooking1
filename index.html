@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotel Booking Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Hotel Booking Registration Form</h2>
+    <form>
+        <fieldset>
+            <legend>Customer Information</legend>
+            <div class="form-group">
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+            </div>
+            <div class="form-group">
+                <label for="check-in-date">Check-in Date:</label>
+                <input type="date" id="check-in-date" name="check-in-date" required>
+            </div>
+            <div class="form-group">
+                <label for="total-days">Total Number of Days:</label>
+                <input type="number" id="total-days" name="total-days" required>
+            </div>
+            <div class="form-group">
+                <label for="total-persons">Total Number of Persons:</label>
+                <input type="number" id="total-persons" name="total-persons" required>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Room Selection</legend>
+            <div class="form-group">
+                <label for="room-type">Room Type:</label>
+                <select id="room-type" name="room-type" required>
+                    <option value="">Select Room Type</option>
+                    <option value="deluxe-room">Deluxe Room</option>
+                    <option value="suite-room">Suite Room</option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Amenities Selection</legend>
+            <div class="form-group">
+                <div class="radio-group">
+                    <input type="radio" name="amenities" id="amenities" value="1000" onchange="calculateBalance()"> AC
+                    <input type="radio" name="amenities" id="amenities" value="300" onchange="calculateBalance()"> Locker
+                </div>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Payment Information</legend>
+            <div class="form-group">
+                <label for="payment">Advance Payment:</label>
+                <input type="number" id="payment" name="payment" value="" required onchange="calculateBalance()">
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend class="legend">Registred</legend>
+            <div class="summary-group">
+                <div class="form-group">
+                    <label for="Balance">Balance Amount:</label>
+                    <input type="number" id="Balance" name="Balance" value="" disabled required>
+                </div>
+                <div class="form-group">
+                    <label for="roomCost">Total Room Cost:</label>
+                    <input type="number" id="roomCost" name="roomCost" value="" disabled required>
+                </div>
+                <div class="form-group">
+                    <label for="totalAmenitiesCost">Total Amenities Cost:</label>
+                    <input type="number" id="totalAmenitiesCost" name="totalAmenitiesCost" value="" disabled required>
+                </div>
+                <div class="form-group">
+                    <label for="totalCost">Total Cost:</label>
+                    <input type="number" id="totalCost" name="totalCost" value="" disabled required>
+                </div>
+            </div>
+        </fieldset>
+        
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn">
+        </div>
+    </form>
+</div>
+
+
+</body>
+<script src="style.js"></script>
+</html>
